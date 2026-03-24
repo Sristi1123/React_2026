@@ -1,7 +1,8 @@
 import "./App.css"
 import ReactDOM from "react-dom/client";
-// import ProductTab from "./ProductTab.jsx"
-
+// // import ProductTab from "./ProductTab.jsx"
+import Header from "./components/Header.jsx";
+import Body from "./components/Body.jsx";
 // // function App(){
 // //   return <ProductTab/>
 // // }
@@ -34,45 +35,6 @@ import ReactDOM from "react-dom/client";
 // // export default Headings;
 // export default Title;
 
-/*
-* -Home
-      : LOGO
-      : Home
-      : About
-      : Contact
-      : Cart
-      : Login
-      : SignUp
-  -Body
-      : Search
-      : RestaurantList
-          : RestaurantCard
-  -Footer
-      : Copyright
-      : Links
-      : Address
-      : Contact
-      : SocialLinks
-*/ 
-const Header=()=>{
-  return(
-    <div className="header">
-      <div className="logo-container">
-        <img className="logo" src="https://c8.alamy.com/comp/2RXNF32/organic-vegan-100-with-leaves-bio-eco-icon-or-symbol-lactose-free-vegan-no-meat-healthy-fresh-food-green-logo-vegetarian-healthy-food-natur-2RXNF32.jpg" alt="logo"/>
-      </div>
-      <div className="nav-items">
-        <ul>
-          <li>Home</li>
-          <li>About</li>
-          <li>Contact</li>
-          <li>Cart</li>
-          <li>Login</li>
-          <li>SignUp</li>
-        </ul>
-      </div>
-    </div>
-  )
-}
 const RestaurantCard=({resData})=>{ 
   const {info}=resData;
   return(
@@ -361,21 +323,67 @@ const resObj=[
       "isOpen": true,
       "type": "F"
     }
+  },
+  {
+    "info": {
+      "id": "1346618",
+      "name": "Fresh Burger",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2025/6/6/5ad086be-38fa-4cf0-8b0c-40310fbfd71d_157453.jpg",
+      "locality": "Vinod Nagar",
+      "areaName": "Vinod Nagar",
+      "costForTwo": "₹200 for two",
+      "cuisines": ["Burgers", "Fast Food"],
+      "veg": true,
+      "parentId": "157453",
+      "avgRatingString": "4.2",
+      "sla": {
+        "deliveryTime": 35,
+        "lastMileTravel": 10.5,
+        "serviceability": "SERVICEABLE",
+        "slaString": "30-40 mins",
+        "lastMileTravelString": "10.5 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2026-03-24 22:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F"
+    }
+
+  },
+  {
+    "info": {
+      "id": "1343607",
+      "name": "Tittu Di Hutti",
+      "cloudinaryImageId": "RX_THUMBNAIL/IMAGES/VENDOR/2024/12/20/31753d78-9a27-4d2b-ae3e-f7ed104a1123_544590.jpg",
+      "locality": "Himnad Nagar",
+      "areaName": "near Clock Tower",
+      "costForTwo": "₹150 for two",
+      "cuisines": ["North Indian", "Bhtura"],
+      "veg": true,
+      "parentId": "544590",
+      "avgRatingString": "4.5",
+      "sla": {
+        "deliveryTime": 35,
+        "lastMileTravel": 10.5,
+        "serviceability": "SERVICEABLE",
+        "slaString": "30-40 mins",
+        "lastMileTravelString": "10.5 km",
+        "iconType": "ICON_TYPE_EMPTY"
+      },
+      "availability": {
+        "nextCloseTime": "2026-03-24 22:00:00",
+        "opened": true
+      },
+      "badges": {},
+      "isOpen": true,
+      "type": "F" 
+      }, 
   }
 ]
-const Body = () => {
-  return (
-    <div className="body">
-      <div className="Search">Search</div>
-
-      <div className="res-container">
-        {resObj.map((res, index) => (
-          <RestaurantCard key={index} resData={res} />
-        ))}
-      </div>
-    </div>
-  );
-};
 const AppLayout=()=>{
   return(
     <div className="app">
