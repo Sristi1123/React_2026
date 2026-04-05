@@ -127,3 +127,8 @@ button:focus-visible {
   width: 186px;
   height: auto;
 }
+.filter-btn{
+  margin:10px;
+  cursor: pointer;
+  
+}
